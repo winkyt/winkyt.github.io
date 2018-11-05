@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Base Map Design</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.0.3/leaflet.css" />
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css" rel='stylesheet' />
+    <link href="../css/map.css" rel="stylesheet">
+    <!-- Javascript Libraries -->
+    <script src="http://cdn.leafletjs.com/leaflet/v1.0.3/leaflet.js"></script>
+    <!-- mapbox gl js -->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.js"></script>
+    <!-- leaflet mapbox js -->
+    <script src="http://rawgit.com/mapbox/mapbox-gl-leaflet/master/leaflet-mapbox-gl.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="modal-body">
+                <h2>Travel with green</h2>
+                <div id="map" style="width: 100%; height: 500px; position:initial"></div>
+                <h3>Map Source:Mapbox</h3>
+                <h4>Feature:</h4>
+                <p>This is a basemap for road trips in Oregon. I use a tree pattern to highlight forested areas. Also, highways that cross with forests are highlighted to be more obvious than I-5. Water, such as lakes and rivers, are also easy to identify. I added an orange color to the background layer so the whole map looks warm and happy, which fits the theme of "travel". The map aims to be used when people want to create a roadtrip map for visiting forested areas.</p>
+                <h4>Idea:</h4>
+                <p>Many of my Chinese friends rarely drive to the forests in Oregon. I think that is also true for most international students. Thus, I want to create a map to show international students the forested area in Oregon and the scenic ways to get there.</p>
+                <br><br><br>
+
+            </div>
+        </div>
+    </div>
+    </div>
+<script>
+    var map = L.map('map').setView([43.981164, -120.576875], 7);
+
+    var gl = L.mapboxGL({
+        accessToken: 'pk.eyJ1Ijoid2lua3l0IiwiYSI6ImNqMjhhZWI4cjAwbzAycW1tYWxsa3VibzEifQ.Zze2mKeLBpZql6xFILyq0g',
+        style: 'map2/style.json'
+    }).addTo(map);
+</script>
+</body>
+</html>
