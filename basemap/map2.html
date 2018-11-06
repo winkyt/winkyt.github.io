@@ -44,12 +44,13 @@
     </div>
     </div>
 <script>
-    var map = L.map('map').setView([43.981164, -120.576875], 7);
-
-    var gl = L.mapboxGL({
-        accessToken: 'pk.eyJ1Ijoid2lua3l0IiwiYSI6ImNqMjhhZWI4cjAwbzAycW1tYWxsa3VibzEifQ.Zze2mKeLBpZql6xFILyq0g',
-        style: 'map2/style.json'
-    }).addTo(map);
+    mapboxgl.accessToken = 'pk.eyJ1Ijoid2lua3l0IiwiYSI6ImNqMjhhZWI4cjAwbzAycW1tYWxsa3VibzEifQ.Zze2mKeLBpZql6xFILyq0g';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/winkyt/cj2kztl2u001m2sli8a7njy25',
+        center: [-120.576875, 43.981164],
+        zoom: 6.3
+    });
 </script>
 </body>
 </html>
