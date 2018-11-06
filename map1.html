@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Base Map Design</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.0.3/leaflet.css" />
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css" rel='stylesheet' />
+    <link href="../css/map.css" rel="stylesheet">
+    <!-- Javascript Libraries -->
+    <script src="http://cdn.leafletjs.com/leaflet/v1.0.3/leaflet.js"></script>
+    <!-- mapbox gl js -->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.js"></script>
+    <!-- leaflet mapbox js -->
+    <script src="http://rawgit.com/mapbox/mapbox-gl-leaflet/master/leaflet-mapbox-gl.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="modal-body">
+                <h2>Roadmap inspired by female geography</h2>
+                <div id="map" style="width: 100%; height: 500px; position:initial"></div>
+                <h3>Map Source:Mapbox</h3>
+                <h4>Feature:</h4>
+                <p>Corvallis is a college town. Some students have work or go to parties on the weekend. This map hightlights the primary roads in Corvallis. The idea is to highlight roads that will likely be illuminated at night and will have more traffic. These roads should be safer for women to travel on at night. The contrast of pink roads on a dark background is meant to appeal to the female target audience.</p>
+                <h4>Idea:</h4>
+                <p>The idea behind this map is from female geography. I noticed that I received more sexual harassment alert emails from OSU in 2016 than the previous year, which inspired me to create a map for females to use primary roads, where has more lights, at night.</p>
+                <br><br><br>
+
+            </div>
+        </div>
+        </div>
+        </div>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoid2lua3l0IiwiYSI6ImNqMjhhZWI4cjAwbzAycW1tYWxsa3VibzEifQ.Zze2mKeLBpZql6xFILyq0g';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/winkyt/cj2mm7p9o002q2rmv5thdeydg',
+        center: [-123.264460, 44.563594],
+        zoom: 12.1
+    });
+</script>
+</body>
+</html>
