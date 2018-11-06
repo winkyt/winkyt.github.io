@@ -45,12 +45,13 @@
         </div>
 
 <script>
-    var map = L.map('map').setView([44.563594, -123.264460], 13);
-
-    var gl = L.mapboxGL({
-        accessToken: 'pk.eyJ1Ijoid2lua3l0IiwiYSI6ImNqMjhhZWI4cjAwbzAycW1tYWxsa3VibzEifQ.Zze2mKeLBpZql6xFILyq0g',
-        style: 'map1/style.json'
-    }).addTo(map);
+    mapboxgl.accessToken = 'pk.eyJ1Ijoid2lua3l0IiwiYSI6ImNqMjhhZWI4cjAwbzAycW1tYWxsa3VibzEifQ.Zze2mKeLBpZql6xFILyq0g';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/winkyt/cj2mm7p9o002q2rmv5thdeydg',
+        center: [-123.264460, 44.563594],
+        zoom: 12.1
+    });
 </script>
 </body>
 </html>
